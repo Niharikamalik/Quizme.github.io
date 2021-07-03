@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>High Scores</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="highscores.css" />
+  </head><style>
+    body{
+      background:  rgba(15, 15, 15, 0.767) url(/images/certificate.jpg );
+background-size: cover 100% * 100%;
+background-blend-mode: darken;
+    }
+
+a{
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 20px ;
+  background: rgb(243, 243, 243);
+color: rgb(17, 17, 17);
+  padding:  10px ;
+  margin: 10px;
+  transition: background 0.5s;
+  
+}
+a:hover{
+  background: rgb(43, 152, 214);
+  color: rgb(236, 232, 232);
+  transition: translatey(2rem);
+}
+
+
+
+
+
+
+:root {
+    /*  */
+    font-size: 62.5%;
+    
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 10px;
+    /* margin-bottom: 1rem; */
+  }
+  
+  h1 {
+    font-size: 5.4rem;
+    color: #080808;
+    margin-bottom: rem;
+  }
+  
+  h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+  
+  h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom:10px ;
+  }
+  h4{
+    font-size: large;
+  }
+  
+  /* UTILITIES */
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin:20px;
+    padding: 2rem;
+  }
+  
+  .container > * {
+    width: 100%;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  #highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.high-score:hover {
+  transform: scale(1.025);
+}
+:root {
+  background:  rgba(15, 15, 15, 0.767) url(/images/certificate.jpg );
+background-size: cover;
+background-blend-mode: darken;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 5.4rem;
+  color: #e1e2e2;
+  margin-bottom: 3rem;
+  margin-left: 600px;
+}
+
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+/* UTILITIES */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container > * {
+  width: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BUTTONS */
+.btn {
+  font-size: 1.8rem;
+  padding: 12px ;
+  width: 20rem;
+  text-align: center;
+  border: 0.1rem solid #050505;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #080808;
+  background-color: white;
+  margin: 10px;
+
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(12, 12, 12, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+  background-color: #050505;
+  color: #e1e2e2;
+
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+
+
+.opt{
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  margin: 50px ;
+  margin-left: 550px;
+  
+}
+.table-box
+{
+    margin: 50px auto;
+    color: #e1e2e2;
+}
+
+.table-row{
+    display: table;
+    width: 40%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 12px 0;
+    color: rgb(240, 234, 234);
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
+}
+.table-head{
+    background: #050505;
+    border-radius: 10px 10px 0 0;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+.table-head .table-cell{
+    border-right: none;
+}
+.table-cell{
+    display: table-cell;
+    width: 20%;
+    text-align: center;
+    padding:4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+    
+}
+.first-cell{
+    text-align: center;
+    padding-left: 10px;
+    background-color: white;
+    border-radius: 0  0px 10px  10px;
+}
+.last-cell{
+    border-right: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .table-row {
+    font-size: 11px;
+  }
+}
+.name{
+  color: aliceblue;
+}
+h1{
+font-size: 30px;
+ margin-left :  550px; 
+ margin-top: 50px;}
+@media  screen and (max-width: 1448px){
+  .opt{
+  display: flex;
+ 
+  margin: 50px ;
+  margin-left: 50px;
+  
+}
+h1{
+display: flex;
+ margin: 10px ;
+  margin-left: 50px;
+  
+}
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+        background-color: #000000e0;
+        height: 80px;
+        width: 100%;
+        position:fixed;
+        color: aliceblue;
+
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        background-color: #000000e0;
+        height: 80px;
+        width: 100%;
+        position:fixed;
+        color: aliceblue;
+
+    }
+    
+    .navbar{
+        display: flex;
+        position: sticky;
+        
+    }
+    label.logo{
+        color: aliceblue;
+        font-size: 35px ;
+        line-height: 80px;
+    }
+    nav ul{
+        float: right;
+        margin-right: 2px ;
+        border-radius: 4rem;
+        margin-left: auto;
+    }
+    nav  li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px ;
+    }
+    nav a{
+       color: aliceblue;
+       font-size: 17px;
+       text-transform: uppercase;
+       border: 3px solid transparent;
+       padding: 7px 10px; 
+       border-radius: 3px;
+    }
+  nav  a.active,a:hover{
+        background-color: #eeebeb2c;
+        transition: .5s;
+        padding: 7px;
+        border-radius: 3rem;
+    
+    }
+    
+    nav #icon{
+        color: rgb(212, 226, 226);
+        font-size: 30px;
+        line-height: 80px;
+        float: right;
+        margin-right: 20px;
+        margin: 7px;
+        cursor: pointer;
+        display: none;
+    
+    }
+    
+  </style>
+
+  <body>
+   
+    <nav>
+     
+     
+      <ul>
+        
+        <li style="color: #fff; font-size:25px; font-weight: bold;margin: auto; margin-right: 200px;"> SCORES OF PARTICIPANTS</li>
+          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a class="active"href="/text2.html">subject</a></li>
+          <li><a class="active" href="/end.html">result</a></li>
+          <li><a class="active"href="/cert/cert.html">Download-Result</a></li>
+       </ul>
+       
+</nav>
+     <div class="container">
+      
+    <div class="table-box">
+      <div class="table-row table-head">
+          <div class="table-cell " id>
+            <p class="name ">Names</p>
+          </div>
+          
+          <div class="table-cell last-cell">
+              <p class="name">Marks</p>
+          </div>
+
+      </div>
+      <div id="highScores" class="flex-center flex-column">
+        <div class="table-row">
+          <div class="table-cell first-cell">
+            <ul id="highScoresList"></ul>
+              <p id="finalScore highScoresList"></p>
+          </div>
+         
+          </div>
+      </div>
+     
+    </div>
+    
+   
+    <script >const highScoresList = document.getElementById("highScoresList");
+        const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+        
+        highScoresList.innerHTML = highScores
+          .map(score => {
+            return `<li class="high-score">${score.name}  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${score.score} </li>`;
+          })
+          .join("");</script>
+
+
+  </body>
+  
+</html>

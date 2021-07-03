@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>computerQuiz - Play</title>
+    <link rel="stylesheet" href="quizapp.css" />
+    <!-- <link rel="stylesheet" href="game.css" /> -->
+  </head>
+  <style>
+    body{
+  font-family: 'Poppins', sans-serif;
+  /* background:radial-gradient(white,#a6cef1); */
+  background:  rgba(31, 30, 30, 0.719) url(/images/52b0ef2e-703c-47aa-84fc-2dc01ef99fd6.jpg  );
+background-size: cover;
+background-blend-mode: darken;
+}
+.navbar{ 
+display: flex;
+align-items: center;
+padding: 20px;
+height: 100%;
+width: 100%;
+}
+
+nav{
+  margin-top: 0;
+  flex: 1;
+  text-align: right;
+}
+
+
+nav ul{
+  display: inline-block;
+  list-style-type: none;
+}
+nav ul li{
+  display: inline-block;
+  margin-right: 20px;
+  padding-top: 20px;
+}
+a{
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 20px ;
+  background: rgb(243, 243, 243);
+color: rgb(17, 17, 17);
+  padding:  10px ;
+  margin: 10pxpx;
+  transition: background 0.5s;
+  
+}
+a:hover{
+  background: rgb(26, 25, 25);
+  color: rgb(236, 232, 232);
+  transition: translatey(2rem);
+}
+
+.container-1{
+  max-width: 1300px;
+  margin: auto;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+
+
+
+:root {
+    /*  */
+    font-size: 62.5%;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 10px;
+    /* margin-bottom: 1rem; */
+  }
+  
+  h1 {
+    font-size: 3.4rem;
+    color: #080808;
+    margin-bottom: rem;
+  }
+  
+  h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom:10px ;
+  }
+  h4{
+    font-size: large;
+  }
+  
+  /* UTILITIES */
+  
+  .container {
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: auto;
+    /* margin-top: 0px;
+    margin-left: 300px;
+    margin-right: 10px; */
+    padding: 2rem;
+    border: rgb(228, 225, 225) solid 1rem;
+    box-shadow: #333 2rem;
+    border-radius:30px ;
+    background-color:rgba(250, 249, 249, 0.856);
+  }
+  
+  .container > * {
+    width: 100%;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* BUTTONS */
+  .btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #8eadeb;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #0e0d0d;
+    background-color: rgb(245, 244, 244);
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background: #131212;
+    color: rgb(227, 231, 231);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+  
+  .btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  /* FORMS */
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+  .choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 90%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgba(19, 22, 26, 0.25);
+    border-radius: 0px 20px;
+    background-color: white;
+  }
+  
+  .choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(133, 209, 247, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+  
+  .choice-prefix {
+    padding: 1.5rem 1.5rem;
+    background-color: #0a0a0a;
+    color: rgb(238, 236, 236);
+    border-radius: 0px 20px ;
+  }
+  
+  .choice-text {
+    padding: 1.3rem;
+    width: 90%;
+  }
+  
+  .correct {
+    background-color: #28a745;
+  }
+  
+  .incorrect {
+    background-color: #dc3545;
+  }
+  
+  /* HUD */
+  
+  #hud {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .hud-main-text {
+    text-align: center;
+  }
+  #progressText{
+   margin: 0;
+  }
+  #progressBar {
+    width: 20rem;
+    height: 2rem;
+    border: 0.3rem solid #0b0c0c;
+    border-radius: 20px;
+    margin-top: 1.5rem;
+  }
+  
+  #progressBarFull {
+    height: 1.4rem;
+    border-radius: 15px;
+    background-color: #0c0c0c;
+    
+    width: 0%;
+  }
+  .score{
+    margin-left: 10px;
+
+  }
+  .quiz-timer{
+    text-align: center;
+    font-size: 2rem;
+    margin: auto;
+    margin-top: 20px;
+    margin-left:560px ;
+    margin-bottom: 10px;
+    display:flex;
+    font-weight: 50px;
+    width: auto;
+    height: auto;
+    border:5px;
+    padding:  10px;
+    background: rgba(245, 245, 245, 0.801);
+    border-radius: 10px;
+
+   
+    
+    
+  }
+  .timer{
+    color: rgb(14, 13, 13); 
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #countdown{
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 20px;
+    color: rgb(20, 19, 19);
+    
+  }
+  </style>
+  <body>
+    <div id="hud">
+      <div id="hud-item">
+        <div class = "quiz-timer ">
+          <p class="timer">Time &nbsp </p>
+        <div id="countdown">00:00 </div>
+        </div>
+      </div>
+</div>
+    <div class="container">
+     
+      <div id="game" class="justify-center flex-column">
+       
+       <div id="hud">
+          <div id="hud-item">
+            <p id="progressText" class="hud-prefix">
+              Question 1/5
+            </p>
+            <div id="progressBar">
+              <div id="progressBarFull"></div>
+            </div>
+          </div>
+         
+          <div id="hud-item">
+            <p class="hud-prefix score">
+              Score
+            </p>
+            <h1 class="hud-main-text" id="score">
+              0
+            </h1>
+          </div>
+         
+        </div>
+        <h2 id="question">What is the answer to this questions?</h2>
+        <div class="choice-container">
+          <p class="choice-prefix">A</p>
+          <p class="choice-text" data-number="1">Choice 1</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">B</p>
+          <p class="choice-text" data-number="2">Choice 2</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">C</p>
+          <p class="choice-text" data-number="3">Choice 3</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">D</p>
+          <p class="choice-text" data-number="4">Choice 4</p>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="game.js"></script> -->
+    <script>
+      const question = document.getElementById('question');
+const choices = Array.from(document.getElementsByClassName('choice-text'));
+const progressText = document.getElementById('progressText');
+const scoreText = document.getElementById('score');
+const progressBarFull = document.getElementById('progressBarFull');
+
+let currentQuestion = {};
+let acceptingAnswers = false;
+let score = 0;
+let questionCounter = 0;
+let availableQuesions = [];
+
+let questions = [];
+
+fetch(
+  'https://opentdb.com/api.php?amount=30&category=18&difficulty=easy&type=multiple' 
+)
+    .then((res) => {
+        return res.json();
+    })
+    .then((loadedQuestions) => {
+        questions = loadedQuestions.results.map((loadedQuestion) => {
+            const formattedQuestion = {
+                question: loadedQuestion.question,
+            };
+
+            const answerChoices = [...loadedQuestion.incorrect_answers];
+            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            answerChoices.splice(
+                formattedQuestion.answer - 1,
+                0,
+                loadedQuestion.correct_answer
+            );
+
+            answerChoices.forEach((choice, index) => {
+                formattedQuestion['choice' + (index + 1)] = choice;
+            });
+
+            return formattedQuestion;
+        });
+        startGame();
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+
+//CONSTANTS
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 10;
+
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
+};
+ 
+    
+getNewQuestion = () => {
+    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score);
+        return window.location.assign('/end.html');
+        //go to the end page
+      
+    } 
+
+   
+    questionCounter++;
+    progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+    //Update the progress bar
+    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+    
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    currentQuestion = availableQuesions[questionIndex];
+    question.innerText = currentQuestion.question;
+
+    choices.forEach((choice) => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    });
+
+    availableQuesions.splice(questionIndex, 1);
+    acceptingAnswers = true;
+};
+
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+
+        const classToApply =
+            selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+        if (classToApply === 'correct') {
+            incrementScore(CORRECT_BONUS);
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);
+    });
+});
+
+incrementScore = (num) => {
+    score += num;
+    scoreText.innerText = score;
+};
+
+    </script>
+     <script>
+                
+      window.onload=function(){
+          var countdown=document.getElementById("countdown");
+          
+          var time=0; // 30 minutes converted to 1800 seconds
+           
+          
+          setInterval(function(){
+              time=time+1;
+             var minute=parseInt(time/60);
+             var second=parseInt(time%60);
+                                   countdown.innerHTML='  '+minute+' : '+second+'';
+          
+          
+          },1000);
+
+         
+    }
+      
+</script>
+  </body>
+</html>

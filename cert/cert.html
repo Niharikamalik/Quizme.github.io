@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Certificate Generator</title>
+</head>
+ <style>
+ body{
+    background:  #0f0f0fb6 url(/images/brett-jordan-VyGV5pX6jwc-unsplash.jpg );
+background-size: cover  ;
+background-blend-mode: darken;
+margin: 0%;
+padding: 0%;
+ }
+ .container{
+     color: rgb(247, 245, 245);
+     font-weight: bold;
+     margin: top 50px;
+     padding: 20px;
+     align-items: center;
+    
+ }
+ input{
+     color: black;
+     font-weight: bold;
+     border-bottom: 1px solid white;
+     text-align: center;
+     border-radius: 10px;
+ }
+ 
+ #download-btn{
+     font-weight:20px;
+     font-size: 20px;
+     color:rgb(22, 22, 22);
+     text-decoration: none;
+     border-bottom: 1px solid white;
+      margin: auto 45%;
+      background-color: azure;
+      border-radius: 10px;
+      padding: 5px 20px;
+     
+ }
+ #download-btn:hover{
+    color:rgb(230, 225, 225);
+    background-color: black;
+    box-shadow: 1rem black;
+ }
+ p{
+    margin:auto 250px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif; 
+    color:white;
+    text-align: center;
+ }
+
+ 
+ label{
+     display: flex;
+     flex-direction: column;
+     width: 30%;
+     margin: 25px auto;
+     margin-bottom: 20px;
+ }
+ nav{
+  display: flex;
+  flex-direction: column;
+  
+        
+        background-color: #0000007a;
+        height: 80px;
+        width: 100%;
+        position:fixed;
+        color: aliceblue;
+
+    }
+    
+    .navbar{
+        display: flex;
+        position: sticky;
+        
+    }
+    label.logo{
+        color: aliceblue;
+        font-size: 35px ;
+        line-height: 80px;
+    }
+    nav ul{
+        float: right;
+        margin-right: 2px ;
+        border-radius: 4rem;
+        margin-left: auto;
+    }
+    nav  li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px ;
+    }
+    nav a{
+       color: aliceblue;
+       font-size: 17px;
+       text-transform: uppercase;
+       border: 3px solid transparent;
+       padding: 7px 10px; 
+       border-radius: 3px;
+    }
+  nav  a.active,a:hover{
+        background-color: #eeebeb2c;
+        transition: .5s;
+        padding: 7px;
+        border-radius: 3rem;
+    
+    }
+    
+    nav #icon{
+        color: rgb(212, 226, 226);
+        font-size: 30px;
+        line-height: 80px;
+        float: right;
+        margin-right: 20px;
+        margin: 7px;
+        cursor: pointer;
+        display: none;
+    
+    }
+    @media(max-width :1048px)
+    { 
+    nav{
+      position :unset;
+    }
+        lable.logo{
+        font-size:20px;
+        padding-left: 60px;
+        }
+    
+        nav ul {
+            margin-right: 10px ;
+        }
+        nav a{
+    font-size: 15px;
+    
+        }
+    }
+    @media(max-width:909px){
+    
+    nav #icon
+    {
+    
+        display: block;
+    }
+    nav ul{
+    
+    width: 100%;
+    height: 100vh;
+    background: url(462518.jpg);
+    top: 80px;
+    left:0%;
+    text-align: center;
+    transition: all.5s;
+    
+    }
+    nav li {
+        display: block;
+        margin: 47px 0;
+        line-height:30px;
+    }
+    nav a{
+    font-size: 20px;
+    }
+    a.active,a:hover{
+        border:none;
+        color: rgb(190, 190, 196);
+    }
+    nav ul.show{
+        left: 0;
+    }
+    }
+    
+    
+ </style>
+<body>
+    <header>
+    <nav>
+       
+     
+        <ul>
+          <li> <img src="/images/random icon.png" alt="logo" width="60px" style=" margin-bottom:8px; color: #fff; font-size:25px; font-weight: bold; "></li>
+          <li ><a  href="/index.html"style="color: #fff; font-size:25px; font-weight: bold; margin-right: 600px;">Web Quiz</a></li>
+            <li><a class="active" href="/index.html">Home</a></li>
+            <li><a class="active"href="/text2.html">subject</a></li>
+            <li><a class="active" href="/end.html">result</a></li>
+            <li><a class="active"href="/highScores.html">Scores</a></li>
+         </ul>
+         
+  </nav>
+    </header><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+  <p >Do you want to save your score then fill all the details 
+    And click on download button </p>
+        
+        <label>
+            Name:
+            <input required id="name" type='text' placeholder="Enter your Name">
+          
+            Subject:
+            <input required id="subject" type='text' placeholder="Enter your subject">
+            
+        </label>
+        <br>
+        <a href="#" id="download-btn">Download</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <canvas id="canvas" height="600px" width="900px" style="margin-left: 10%;"></canvas>
+    </div>
+    
+    <script src="cert.js"></script>
+   
+</body>
+
+</html>

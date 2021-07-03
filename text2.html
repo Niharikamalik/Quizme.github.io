@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://kit.fontawesome.com/7c798b4119.js" crossorigin="anonymous"></script>
+   <style>
+     body{
+       margin: 0;
+       padding: 0;
+       background:  rgba(31, 30, 30, 0.719) url(/images/WhatsApp\ Image\ 2021-06-15\ at\ 9.49.42\ PM.jpeg  );
+background-size: cover;
+background-blend-mode: darken;
+     }
+.container{
+  text-align: center;
+       background-color: Radial-gradient(rgb(228,227,227),rgba(132,201,241,0.699));
+       font-family: Arial;
+       
+}
+     button{      font-size: 16px;
+      margin-left: 500px;
+       margin: 20px;
+         color: black;
+          font-weight: bold; 
+          border-radius: 10px; 
+          background-color: rgb(235, 241, 243);
+           border-color: rgb(7, 6, 6);
+           transition: background 0.5s;
+           padding: 5px 5px; 
+          width: 16%;
+          }
+  button:hover{
+   background-color: black;
+   color: aliceblue;
+  }
+  .maths p{
+    font-size: 25px;
+    
+    color: aliceblue;
+  }
+  .maths{
+    display: flexbox;
+    margin:auto;
+    text-align: left;
+    border: black 1rem;
+    border-radius: 10px;
+    width: auto;
+    height: 100px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: #f0efef;
+    color: rgb(0, 0, 0);
+  }
+  em{
+    color: #f51b1b;
+  }
+    </style>
+    <meta charset="utf-8">
+    <title>Web Quiz</title>
+  </head>
+  <body>
+<div class="container">
+    <h2 style="color: #f5f0f2;">Please select a subject for the quiz.</h2>
+<h3 style="color: #f5f0f2;">Subjects:</h3>
+<p class="maths"> For <em> mathematics </em>select difficulty level  <button onclick="document.location='/easy/maths-easy.html'" href="/easy/maths-easy.html" ><i class="fas fa-calculator"></i>&nbsp;easy</button>
+  <button onclick="document.location='/medium/maths-med.html'" href="/medium/maths-med.html" ><i class="fas fa-calculator"></i>&nbsp;Medium</button>
+  <button onclick="document.location='/hard/maths-hard.html'" href="/hard/maths-hard.html" ><i class="fas fa-calculator"></i>&nbsp;hard</button></p>
+<br>
+<p class="maths"> For<em> computer </em> difficulty level &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="document.location='/easy/computer-easy.html'" href="/easy/computer-easy.html" ><i class="fas fa-laptop"></i>&nbsp;
+  easy</button>
+  <button onclick="document.location='/medium/computer-med.html'" href="/medium/computer-med.html" ><i class="fas fa-laptop"></i>&nbsp;Medium</button>
+  <button onclick="document.location='/hard/computer-hard.html'" href="/hard/computer-hard.html" ><i class="fas fa-laptop"></i>&nbsp;hard</button></p>
+  <br>
+  <p class="maths"> For <em>GK</em> select difficulty level &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="document.location='/easy/GK-easy.html'" href="/easy/GK-easy.html" ><i class="fas fa-book-reader"></i>&nbsp;easy</button>
+    <button onclick="document.location='/medium/gk-med.html'" href="/medium/gk-med.html" ><i class="fas fa-book-reader"></i>&nbsp;Medium</button>
+    <button onclick="document.location='/hard/gk-hard.html'" href="/hard/gk-hard.html" ><i class="fas fa-book-reader"></i> &nbsp;hard</button></p>
+    <br>
+  
+    <p class="maths"> For <em>random</em> select difficulty level &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="document.location='/random/random-easy.html'" href="/random/random-easy.html" ><i class="fas fa-pen-alt"></i>&nbsp;easy</button>
+      <button onclick="document.location='/medium/random-med.html'" href="/medium/random-med.html" ><i class="fas fa-pen-alt"></i>&nbsp;Medium</button>
+      <button onclick="document.lnocation='/hard/random-hard.html'" href="/hard/random-hard.html" ><i class="fas fa-pen-alt"></i>&nbsp;hard</button></p>
+
+</div>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://kit.fontawesome.com/7c798b4119.js" crossorigin="anonymous"></script>
+<style>
+    
+    body {
+      text-align: center;
+      background:  rgb(240, 238, 238) ;
+    background-size: cover;
+    background-blend-mode: darken;
+      font-family: Arial;
+    }
+    
+    p {
+      color: black;
+    }
+    .fish {
+      width: 15%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font-weight: bolder;
+  background-color: black
+  
+    }
+    em {
+      color: black;
+    }
+    a {
+      color: darkblue;
+    }
+    button{
+        font-size: 30px;
+         margin: 30px;
+           color: black;
+            font-weight: bolder; 
+            border-radius: 10px; 
+            background-color: rgb(238, 244, 247);
+             border-color: rgb(243, 236, 236);
+             transition: background 0.5s;
+             padding: 5px 5px; 
+             width: 20%;
+    }
+    button:hover{
+     background-color: black;
+     color: aliceblue;
+    }
+    
+    
+    
+    .info_box,
+    .quiz_box,
+    .result_box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .info_box.activeInfo,
+    .quiz_box.activeQuiz,
+    .result_box.activeResult{
+        opacity: 1;
+        z-index: 5;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+   
+    
+    .info_box{
+        width: 570px;
+        background: #fff;
+        border-radius: 5px;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        text-align: left;
+        margin-top: 10px ;
+        
+     }
+    
+    .info_box .info-title{
+        height: 60px;
+        width: 100%;
+        border-bottom: 1px solid lightgrey;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        border-radius: 5px 5px 0 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .info_box .info-list{
+        padding: 15px 30px;
+    }
+    
+    .info_box .info-list .info{
+        margin: 5px 0;
+        font-size: 17px;
+    }
+    
+    .info_box .info-list .info span{
+        font-weight: 600;
+        color: #007bff;
+    }
+    .info_box .buttons{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 30px;
+        border-top: 1px solid lightgrey;
+    }
+    
+    .info_box .buttons button{
+        margin: 0 5px;
+        height: 40px;
+        width: 100px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #111111;
+        transition: all 0.3s ease;
+    }
+    
+    .container{
+        width: 570px;
+        background: #fff;
+        border-radius: 5px;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        text-align: left;
+        margin-top: 10px ;
+        
+     }
+    
+    .container h1 h2{
+        height: 60px;
+        width: 100%;
+        border-bottom: 1px solid lightgrey;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        border-radius: 5px 5px 0 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+   .quit.restart{
+       width: 30%;
+   }
+    
+    </style>
+<body>
+    <h1 style="font-size: 70px; color: #990033; font-family: Arial; text-shadow: 2px 2px black">WEB QUIZ!</h1>
+    <h2>Know how much you know.</h2>
+    <p style="font-size: 30px; ;">
+    Press Begin whenever you're ready to start.</p><br>
+    
+    <br>
+    
+   <div class="start_btn"><button>Begin!</button></div> 
+   
+    <br>
+    <br>
+    <br>
+    <p style="font-size: 15px;">
+    By clicking Begin, you agree to our <a href="" >Terms</a>, <a href="" >Data Policy</a> and <a href="" >Cookie Policy</a>.You may receive email notifications from us and can opt out at any time.</p>   
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. Once you select your answer, it can't be undone.</div>
+            <div class="info">2. You can't select any option once time goes off.</div>
+            <div class="info">3. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">4. You'll get points on the basis of your correct answers.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz&nbsp;<i class="fas fa-times"></i></button>
+            <button class="restart"onclick="document.location='/text2.html' "href="/text2.html" >Continue&nbsp;<i class="fas fa-sign-out-alt"></i></button>
+
+        </div>
+        
+</body>
+<script>
+    const start_btn = document.querySelector(".start_btn button");
+    const info_box = document.querySelector(".info_box");
+    const exit_btn = info_box.querySelector(".buttons .quit");
+    const continue_btn = info_box.querySelector(".buttons .restart");
+    const container = info_box.querySelector("container");
+   
+
+ start_btn.onclick = ()=>{
+        info_box.classList.add("activeInfo"); //show info box
+    }
+    // if exitQuiz button clicked
+    exit_btn.onclick = ()=>{
+        info_box.classList.remove("activeInfo"); //hide info box
+    }
+    // if continueQuiz button clicked
+    
+</script>
+</html>
